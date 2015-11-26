@@ -28,22 +28,23 @@
 			}
 		}
 
-		public function create(){
+		protected function create(){
 			#logica de criar
 		}
 
-		public function read(){
+		protected function read(){
 			$sql = 'SELECT * FROM ' . $this->_table;
 			$stmt = $this->db->prepare($sql);
 			$stmt->execute();
+			
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
 		}
 
-		public function update(){
+		protected function update(){
 			#logica de alterar
 		}
 
-		public function delete(){
+		protected function delete(){
 			#logica de excluir
 		}
 	}
